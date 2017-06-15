@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FotoDestinoApp.Paginas.PaginaFoto1">
+    <ContentPage.Content>
+        <StackLayout  HorizontalOptions="CenterAndExpand"
+                    Orientation="Vertical">
+            <Image x:Name="imgFoto"/>
+            <Label x:Name="lblLatitude" Text=""/>
+            <Label x:Name="lblLongitude" Text=""/>
+            <StackLayout  HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                <Button Text="Foto" Clicked="btnFoto" />
+                <Button Text="Album" Clicked="btnAlbum"  />
+                <Button Text="Salvar" Clicked="btnSalvar" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

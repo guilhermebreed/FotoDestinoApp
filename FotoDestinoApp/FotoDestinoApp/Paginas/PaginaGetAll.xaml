@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FotoDestinoApp.Paginas.PaginaGetAll">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Fotos" VerticalOptions="Center" Font="25" HorizontalOptions="Center"/>
+
+                <ListView x:Name="lvFotos" RowHeight="150" ItemSelected="lvFotos_OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="25*"/>
+                                        <ColumnDefinition Width="25*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding pathFoto}" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <Label Text="Latitude" Grid.Column="1" Grid.Row="0" TextColor="Blue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    <Label Text="{Binding latitude}" Grid.Column="2" Grid.Row="0" TextColor="Green" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
