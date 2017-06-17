@@ -8,8 +8,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -19,14 +17,9 @@
 
                 <Button Text="Imagem1" Grid.Column="0" Grid.Row="0" TextColor="Green" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnImagem1"/>
                 <Image x:Name="img1" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label x:Name="lblLatitudeImg1" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label x:Name="lblLongitudeImg1" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"/>
                 
                 <Button Text="Imagem2" Grid.Column="1" Grid.Row="0" TextColor="Blue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnImagem2"/>
                 <Image x:Name="img2" Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label x:Name="lblLatitudeImg2" Grid.Column="1" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label x:Name="lblLongitudeImg2" Grid.Column="1" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"/>
-                
             </Grid>
         </StackLayout>
     </ContentPage.Content>

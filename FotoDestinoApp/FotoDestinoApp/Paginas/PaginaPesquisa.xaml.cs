@@ -26,38 +26,15 @@ namespace FotoDestinoApp.Paginas
 
         public async void btnImagem1() {
             qualImagem = true;
-            await Navigation.PushModalAsync(new PaginaGetAll(this));
-            
-          /*  img1.Source = ImageSource.FromFile(imagem1.pathFoto);
-            lblLatitudeImg1.Text = "" + imagem1.latitude;
-            lblLongitudeImg1.Text = "" + imagem1.longitude;
-            */
+            await Navigation.PushModalAsync(new PaginaGetAll());
+            img1.Source = ImageSource.FromFile(imagem1.pathFoto);
         }
 
         public async void btnImagem2()
         {
             qualImagem = false;
-            await Navigation.PushModalAsync(new PaginaGetAll(this));
-            
-            /*
+            await Navigation.PushModalAsync(new PaginaGetAll());
             img2.Source = ImageSource.FromFile(imagem2.pathFoto);
-            lblLatitudeImg2.Text = "" + imagem2.latitude;
-            lblLongitudeImg2.Text = "" + imagem2.longitude;
-            */
-        }
-
-        public void atualizarDados() {
-            if (qualImagem) {
-                img1.Source = ImageSource.FromFile(imagem1.pathFoto);
-                lblLatitudeImg1.Text = "" + imagem1.latitude;
-                lblLongitudeImg1.Text = "" + imagem1.longitude;
-            }
-            else
-            {
-                img2.Source = ImageSource.FromFile(imagem2.pathFoto);
-                lblLatitudeImg2.Text = "" + imagem2.latitude;
-                lblLongitudeImg2.Text = "" + imagem2.longitude;
-            }
         }
     }
 }

@@ -28,7 +28,7 @@ namespace FotoDestinoApp.Paginas
 
         private async void btnTeste(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PaginaGetAll(new PaginaPesquisa()));
+            await Navigation.PushAsync(new PaginaGetAll());
         }
 
         private async void btnPesquisa(object sender, EventArgs e)
