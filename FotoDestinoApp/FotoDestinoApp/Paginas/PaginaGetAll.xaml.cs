@@ -15,10 +15,12 @@ namespace FotoDestinoApp.Paginas
     public partial class PaginaGetAll : ContentPage
     {
         MBFotoDAL mbFotoDAL = new MBFotoDAL();
+        PaginaPesquisa pp = new PaginaPesquisa();
 
-        public PaginaGetAll()
+        public PaginaGetAll(PaginaPesquisa pp)
         {
             InitializeComponent();
+            this.pp = pp;
         }
 
         protected override void OnAppearing()
@@ -30,15 +32,17 @@ namespace FotoDestinoApp.Paginas
 
         private void lvFotos_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            
             if (PaginaPesquisa.qualImagem)
             {
                 PaginaPesquisa.imagem1 = (MBFoto)e.SelectedItem;
+                
             }
             else
             {
                 PaginaPesquisa.imagem2 = (MBFoto)e.SelectedItem;
             }
-
+            pp.atualizarDados();
             Navigation.PopModalAsync(true);
         }
     }
